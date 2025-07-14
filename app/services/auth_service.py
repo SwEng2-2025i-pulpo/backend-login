@@ -37,7 +37,13 @@ class AuthService:
         if not user or not verify_password(credentials.password, user["passwordHash"]):
             raise HTTPException(status_code=401, detail="Credenciales inválidas")
 
-        token_data = {"sub": user["email"], "role": user["role"]}
+        # token_data = {"sub": user["email"], "role": user["role"]}
+        token_data = {
+        "sub": str(user["_id"]),      # aquí guardamos el ID del cuidador
+        "email": user["email"],
+        "role": user["role"]
+        }
+
         token = create_access_token(data=token_data)
 
         return Token(access_token=token, token_type="bearer")
