@@ -49,4 +49,4 @@ app.include_router(auth.router)
 
 
 # Main entry point for the FastAPI application
-# uvicorn app.main:app --reload
+# uvicorn app.main:app --reload --port 3003
