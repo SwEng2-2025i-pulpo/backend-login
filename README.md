@@ -83,7 +83,7 @@ Si deseas integrar un dashboard Prometheus, agrega en tu archivo prometheus.yml:
 scrape_configs:
   - job_name: 'fastapi-backend-login'
     static_configs:
-      - targets: ['localhost:8000']
+      - targets: ['localhost:3003']
 ```
 
 🔒 Seguridad
