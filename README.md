@@ -3,6 +3,7 @@
 Servicio backend para la autenticación de cuidadores en ConectaCare. Permite el registro y login de usuarios con protección JWT, así como observabilidad con Prometheus.
 
 ## 🗂️ Estructura
+```
 app/
 │
 ├── api/v1/ # Endpoints: login, registro
@@ -13,17 +14,19 @@ app/
 ├── services/ # Lógica de negocio auth
 ├── dependencies/ # Dependencias como get_current_user
 └── main.py # Punto de entrada FastAPI
+```
 
 ## ⚙️ Configuración
 
 ### Variables de entorno (.env)
 
 Crea un archivo `.env` en la raíz del proyecto basado en el `.env.example`:
-
+```
 MONGO_URI=<URI de conexión MongoDB>
 JWT_SECRET_KEY=<Clave secreta segura>
 JWT_ALGORITHM=HS256
 JWT_EXPIRE_MINUTES=60
+```
 
 ### Instalación
 
